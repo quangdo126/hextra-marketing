@@ -1,19 +1,21 @@
 import Home3Footer from '@/components/Footer/Home3Footer'
-import Header3 from '@/components/header/Header3'
+import Header3 from '@/components/header/Header4'
 import React from 'react'
 
 const ContactPage = () => {
     return (
         <>
             <Header3 />
-
+            <br></br>
+            <br></br>
+            <br></br>
             {/* Breadcrumb Section Start */}
             <div className="breadcrumb-section mb-130">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-xl-6 col-lg-8">
                             <div className="banner-content">
-                                <h1>Let’s Build <br /> Flexible Project</h1>
+                                <h1>Let’s Build <br /> Your Success</h1>
                                 <ul className="breadcrumb-list">
                                     <li><a href="/">Home</a></li>
                                     <li>
@@ -35,8 +37,8 @@ const ContactPage = () => {
                     <div className="row g-4">
                         <div className="col-lg-4 col-md-6 wow animate fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="single-contact">
-                                <h4>New York</h4>
-                                <a href="https://www.google.com/maps">123 Business St., Suite 456, City, State, ZIP Code, Country</a>
+                                <h4>Stafford, TX</h4>
+                                <a href="https://www.google.com/maps">12707 Murphy Rd,<br></br> Stafford, TX 77477</a>
                                 <ul className="contact-list">
                                     <li>
                                         <div className="icon">
@@ -44,7 +46,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Call 24/7 Hours</span>
-                                            <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
+                                            <h6><a href="tel:(346) 214-6888">(346) 214-6888 </a></h6>
                                         </div>
                                     </li>
                                     <li>
@@ -53,7 +55,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Send Us Mail</span>
-                                            <h6><a href="mailto:info@example.com">info@example.com</a></h6>
+                                            <h6><a href="mailto:support@hextra.us">support@hextra.us</a></h6>
                                         </div>
                                     </li>
                                 </ul>
@@ -61,8 +63,8 @@ const ContactPage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="single-contact two">
-                                <h4>Australia</h4>
-                                <a href="https://www.google.com/maps">123 Innovation Road, Suite 101Tech City, State, ZIP CodeCountry</a>
+                                <h4>Sheridan, WY</h4>
+                                <a href="https://www.google.com/maps">30 N Gould St Ste R,<br></br> Sheridan, Wyoming 82801</a>
                                 <ul className="contact-list">
                                     <li>
                                         <div className="icon">
@@ -70,7 +72,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Call 24/7 Hours</span>
-                                            <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
+                                            <h6><a href="tel:(346) 214-6888">(346) 214-6888 </a></h6>
                                         </div>
                                     </li>
                                     <li>
@@ -79,7 +81,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Send Us Mail</span>
-                                            <h6><a href="mailto:info@example.com">info@example.com</a></h6>
+                                            <h6><a href="mailto:support@hextra.us">support@hextra.us</a></h6>
                                         </div>
                                     </li>
                                 </ul>
@@ -87,8 +89,8 @@ const ContactPage = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="single-contact three">
-                                <h4>London, UK</h4>
-                                <a href="https://www.google.com/maps">123 Business St., Suite 456, City, State, ZIP Code, Country</a>
+                                <h4>Vietnam</h4>
+                                <a href="https://www.google.com/maps">27 N7 Street, Hiep Thanh Ward,<br></br> District 12, Ho Chi Minh City</a>
                                 <ul className="contact-list">
                                     <li>
                                         <div className="icon">
@@ -96,7 +98,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Call 24/7 Hours</span>
-                                            <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
+                                            <h6><a href="tel:0902-881-467">0902-881-467 </a></h6>
                                         </div>
                                     </li>
                                     <li>
@@ -105,7 +107,7 @@ const ContactPage = () => {
                                         </div>
                                         <div className="content">
                                             <span>Send Us Mail</span>
-                                            <h6><a href="mailto:info@example.com">info@example.com</a></h6>
+                                            <h6><a href="mailto:support@hextra.us">support@hextra.us</a></h6>
                                         </div>
                                     </li>
                                 </ul>
@@ -149,18 +151,18 @@ const ContactPage = () => {
                                         <div className="col-md-6">
                                             <div className="form-inner">
                                                 <label>Phone</label>
-                                                <input type="text" placeholder="+99 087 *** ** ***" />
+                                                <input type="text" placeholder="*** *** ****" />
                                             </div>
                                         </div>
                                         <div className="col-md-12">
                                             <div className="form-inner2">
-                                                <label>How can We Assist You?</label>
+                                                <label>How Can We Assist You?</label>
                                                 <ul>
                                                     <li>
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck1" />
                                                             <label className="form-check-label" htmlFor="contactCheck1">
-                                                                IT Consulitng
+                                                                All-in-one Solution
                                                             </label>
                                                         </div>
                                                     </li>
@@ -168,7 +170,7 @@ const ContactPage = () => {
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck2" />
                                                             <label className="form-check-label" htmlFor="contactCheck2">
-                                                                UI/UX Design
+                                                                Digital Marketing
                                                             </label>
                                                         </div>
                                                     </li>
@@ -176,7 +178,7 @@ const ContactPage = () => {
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck3" />
                                                             <label className="form-check-label" htmlFor="contactCheck3">
-                                                                Cloud Solution
+                                                                Website Design
                                                             </label>
                                                         </div>
                                                     </li>
@@ -184,7 +186,23 @@ const ContactPage = () => {
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck4" />
                                                             <label className="form-check-label" htmlFor="contactCheck4">
-                                                                AI &amp; Machine Learning
+                                                                SEO
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="form-check">
+                                                            <input className="form-check-input" type="checkbox" defaultValue id="contactCheck6" />
+                                                            <label className="form-check-label" htmlFor="contactCheck6">
+                                                                Graphic Design
+                                                            </label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div className="form-check">
+                                                            <input className="form-check-input" type="checkbox" defaultValue id="contactCheck6" />
+                                                            <label className="form-check-label" htmlFor="contactCheck6">
+                                                                Printing
                                                             </label>
                                                         </div>
                                                     </li>
@@ -193,14 +211,6 @@ const ContactPage = () => {
                                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck5" />
                                                             <label className="form-check-label" htmlFor="contactCheck5">
                                                                 Technical Support
-                                                            </label>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div className="form-check">
-                                                            <input className="form-check-input" type="checkbox" defaultValue id="contactCheck6" />
-                                                            <label className="form-check-label" htmlFor="contactCheck6">
-                                                                DevOps Services
                                                             </label>
                                                         </div>
                                                     </li>
@@ -218,7 +228,7 @@ const ContactPage = () => {
                                         <div className="form-check">
                                             <input className="form-check-input" type="checkbox" defaultValue id="contactCheck22" />
                                             <label className="form-check-label" htmlFor="contactCheck22">
-                                                By submitting, you will agree our <span>privacy-policy &amp; terms conditions</span>.
+                                                By submitting, you will agree our <span>privacy-policy</span> &amp; <span>terms conditions</span>.
                                             </label>
                                         </div>
                                     </div>
