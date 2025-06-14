@@ -22,7 +22,7 @@ const Home4CaseStudySection = () => {
                             <div className="col-lg-3 d-flex justify-content-lg-end">
                                 <div className="result-area">
                                     <span>80%</span>
-                                    <p>Our Clients Double Revenue Generate in the First <strong>05 Months.</strong></p>
+                                    <p>Our Clients Double Revenue Generate in the First <strong>06 Months.</strong></p>
                                     <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
                                     </svg>
@@ -61,7 +61,7 @@ const Home4CaseStudySection = () => {
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={27}
+                                                            end={30}
                                                             speed={50}
                                                             forwardedRef={ref3}
                                                             as="h5"
@@ -82,13 +82,13 @@ const Home4CaseStudySection = () => {
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={10}
+                                                            end={50}
                                                             speed={50}
                                                             forwardedRef={ref4}
                                                             as="h5"
                                                             className="counter"
                                                         />
-                                                        <span>M+</span>
+                                                        <span>%</span>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -142,7 +142,7 @@ const Home4CaseStudySection = () => {
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={800}
+                                                            end={70}
                                                             speed={10}
                                                             forwardedRef={ref5}
                                                             as="h5"
@@ -163,13 +163,13 @@ const Home4CaseStudySection = () => {
                                                     <div className="counter-area">
                                                         <Counter
                                                             start={0}
-                                                            end={24}
+                                                            end={60}
                                                             speed={50}
                                                             forwardedRef={ref6}
                                                             as="h5"
                                                             className="counter"
                                                         />
-                                                        <span>M+</span>
+                                                        <span>%</span>
                                                     </div>
                                                 </li>
                                             </ul>
