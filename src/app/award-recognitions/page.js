@@ -1,7 +1,7 @@
 "use client"
 import AwardListSection from '@/components/AwardListSection'
 import Home3Footer from '@/components/Footer/Home3Footer'
-import Header3 from '@/components/header/Header3'
+import Header3 from '@/components/header/Header4'
 import React, { useState } from 'react'
 
 const AwardRecognitionsPage = () => {
