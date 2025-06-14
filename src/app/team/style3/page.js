@@ -1,7 +1,7 @@
 "use client"
 import Counter from '@/components/common/Counter'
 import GallerySection from '@/components/common/GallerySection'
-import Home3Footer from '@/components/Footer/Home3Footer'
+import Home3Footer from '@/components/footer/Footer'
 import Header3 from '@/components/header/Header3'
 import Link from 'next/link'
 import React, { useRef } from 'react'
