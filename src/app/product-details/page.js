@@ -79,6 +79,9 @@ const ProductDetailsPage = () => {
     return (
         <>
             <Header3 />
+            <br></br>
+            <br></br>
+            <br></br>
             <div className="breadcrumb-section mb-130">
                 <div className="container">
                     <div className="row justify-content-center">
