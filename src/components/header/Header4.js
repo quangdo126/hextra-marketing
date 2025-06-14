@@ -93,7 +93,6 @@ const Header4 = () => {
     const companyPaths = [
         '/about',
         '/team',
-        '/award-recognitions',
         '/social-responsibility',
     ];
 
@@ -128,7 +127,6 @@ const Header4 = () => {
                                     <ul className={`sub-menu ${state.activeMenu === "company" ? "d-block" : "none"}`} >
                                         <li className={pathname === "/about" ? "active" : ""}><Link href="/about">About Us</Link></li>
                                         <li className={pathname === "/team" ? "active" : ""}><Link href="/team">Our Team</Link></li>
-                                        <li className={pathname === "/award-recognitions" ? "active" : ""}><Link href="/award-recognitions">Award & Recognitions</Link></li>
                                         <li className={pathname === "/social-responsibility" ? "active" : ""}><Link href="/social-responsibility">Social Responsibility</Link></li>
                                     </ul>
                                 </li>
