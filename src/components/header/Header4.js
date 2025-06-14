@@ -2,6 +2,7 @@
 import React, { useEffect, useReducer, useRef } from 'react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+
 const initialState = {
     activeMenu: "",
     activeSubMenu: "",
@@ -10,12 +11,12 @@ const initialState = {
     isRightSidebar: false,
     isLang: false,
 };
+
 function reducer(state, action) {
     switch (action.type) {
         case "TOGGLE_MENU":
             return {
                 ...state,
-
                 activeMenu: state.activeMenu === action.menu ? "" : action.menu,
                 activeSubMenu:
                     state.activeMenu === action.menu ? state.activeSubMenu : "",
@@ -56,17 +57,20 @@ function reducer(state, action) {
 const Header4 = () => {
     const [state, dispatch] = useReducer(reducer, initialState);
     const headerRef = useRef(null);
-    const pathname = usePathname()
+    const pathname = usePathname();
+
     const handleScroll = () => {
         const { scrollY } = window;
         dispatch({ type: "setScrollY", payload: scrollY });
     };
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
     const toggleMenu = (menu) => {
         dispatch({ type: "TOGGLE_MENU", menu });
     };
@@ -74,152 +78,30 @@ const Header4 = () => {
     const toggleRightSidebar = () => {
         dispatch({ type: "TOGGLE_RIGHTSIDEBAR" });
     };
+
     const toggleSubMenu = (subMenu) => {
         dispatch({ type: "TOGGLE_SUB_MENU", subMenu });
     };
+
     const toggleSidebar = () => {
         console.log("click");
-
         dispatch({ type: "TOGGLE_MENU", menu: "" });
         dispatch({ type: "TOGGLE_SUB_MENU", subMenu: "" });
         dispatch({ type: "TOGGLE_SIDEBAR" });
     };
+
     const companyPaths = [
         '/about',
         '/team',
-        '/team/style2',
-        '/team/style3',
-        '/team/details',
         '/award-recognitions',
         '/social-responsibility',
-        '/service',
-        '/service/style2',
-        '/service/details',
-        '/case-study',
-        '/case-study/style2',
-        '/case-study/details',
-        '/news-insight-grid',
-        '/news-insight-grid/style2',
-        '/news-insight-grid/style3',
-        '/news-insight-grid/details',
-        '/pricing',
-        '/career',
-        '/career/details',
-        '/shop',
-        '/cart',
-        '/checkout',
-        '/product-details',
-        '/faq',
-        '/contact',
     ];
-    const homePaths = [
-        '/digital-agency',
-        '/digital-agency-dark',
-        '/startup-agency',
-        '/startup-agency-dark',
-        '/fintech',
-        '/fintech-dark',
-        '/marketing-agency',
-        '/marketing-agency-dark',
-        '/it-consulting',
-        '/it-consulting-dark',
-        '/saas-product',
-        '/saas-product-dark',
-        '/portfolio',
-        '/portfolio-dark',
-    ]
-    const portfolioPaths = [
-        '/portfolio',
-        '/portfolio/masonry',
-        '/portfolio/slider', '/portfolio/classic',
-        '/portfolio/creative',
-        '/portfolio/caption',
-        '/portfolio/horizontal',
-        '/portfolio/carousel',
-        '/portfolio/vertical',
-        '/portfolio/interactive-link',
-        '/portfolio/grid',
-        '/portfolio/details']
+
     const isCompanyActive = companyPaths.some((path) => pathname.startsWith(path));
-    const isPortfolioActive = portfolioPaths.some((path) => pathname.startsWith(path));
-    const isHomeActive = homePaths.some((path) => pathname.startsWith(path));
+
     return (
         <>
-            <div className={`right-sidebar-menu ${state.isRightSidebar ? "show-right-menu" : ""
-                }`}>
-                <div className="sidebar-logo-area d-flex justify-content-between align-items-center">
-                    <div className="sidebar-logo-wrap">
-                        <Link href="/">
-                            <img alt="image" src="/assets/img/right-sidebar-sm-logo.svg" className="light" />
-                            <img alt="image" src="/assets/img/right-sidebar-sm-logo-white.svg" className="dark" />
-                        </Link>
-                    </div>
-                    <div className="right-sidebar-close-btn" onClick={toggleRightSidebar}>
-                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                            <path fillRule="evenodd" clipRule="evenodd" d="M14.6694 3.0106C14.8839 2.78848 15.0026 2.49099 15 2.18219C14.9973 1.8734 14.8734 1.57801 14.6551 1.35966C14.4367 1.1413 14.1413 1.01744 13.8325 1.01475C13.5237 1.01207 13.2262 1.13078 13.0041 1.34531L8.00706 6.34236L3.01119 1.34531C2.90184 1.23589 2.77202 1.14907 2.62912 1.08983C2.48623 1.03058 2.33306 1.00005 2.17837 1C2.02368 0.999945 1.87049 1.03036 1.72756 1.08951C1.58462 1.14865 1.45473 1.23538 1.34531 1.34472C1.23589 1.45407 1.14907 1.58389 1.08983 1.72679C1.03058 1.86968 1.00005 2.02285 1 2.17754C0.999945 2.33223 1.03036 2.48542 1.08951 2.62835C1.14865 2.77129 1.23538 2.90118 1.34472 3.0106L6.34177 8.00765L1.34472 13.0047C1.12389 13.2257 0.99989 13.5253 1 13.8378C1.00011 14.1502 1.12432 14.4497 1.34531 14.6706C1.5663 14.8914 1.86596 15.0154 2.17837 15.0153C2.49078 15.0152 2.79036 14.891 3.01119 14.67L8.00706 9.67294L13.0041 14.67C13.2262 14.8845 13.5237 15.0032 13.8325 15.0005C14.1413 14.9979 14.4367 14.874 14.6551 14.6556C14.8734 14.4373 14.9973 14.1419 15 13.8331C15.0026 13.5243 14.8839 13.2268 14.6694 13.0047L9.67235 8.00765L14.6694 3.0106Z" />
-                        </svg>
-                    </div>
-                </div>
-                <div className="sidebar-content-wrap">
-                    <div className="sidebar-content">
-                        <h3>We are Global Digital Brand Tech Agency.</h3>
-                        <div className="address-area">
-                            <h5>New York</h5>
-                            <a href="https://www.google.com/maps">123 Business St, Suite 456, City, State, ZIP Code 3456, Country.</a>
-                        </div>
-                        <ul className="contact-area">
-                            <li className="single-contact">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/contact-mail-icon.svg" alt="" />
-                                </div>
-                                <div className="content">
-                                    <span>Send Us Mail</span>
-                                    <h6><a href="mailto:info@example.com">info@example.com</a></h6>
-                                </div>
-                            </li>
-                            <li className="single-contact">
-                                <div className="icon">
-                                    <img src="/assets/img/home1/icon/contact-call-icon.svg" alt="" />
-                                </div>
-                                <div className="content">
-                                    <span>Call 24/7 Hours</span>
-                                    <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="sidebar-bottom-area">
-                        <div className="subscribe-area">
-                            <h5>Subscribe To Get Free Update.</h5>
-                            <form className="subscribe-form-wrap">
-                                <div className="subscribe-form">
-                                    <input type="email" placeholder="Enter Email" />
-                                    <button type="submit">
-                                        <svg width={16} height={16} viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M15.9647 0.685806C16.0011 0.594942 16.01 0.495402 15.9904 0.399526C15.9707 0.303649 15.9233 0.215653 15.8541 0.146447C15.7849 0.0772403 15.6969 0.0298668 15.601 0.0101994C15.5052 -0.0094681 15.4056 -0.000564594 15.3147 0.0358061L0.76775 5.85481H0.76675L0.31475 6.03481C0.22914 6.06895 0.154635 6.1261 0.0994654 6.19994C0.0442956 6.27377 0.0106078 6.36142 0.00212322 6.4532C-0.00636132 6.54497 0.0106876 6.63731 0.0513867 6.72001C0.0920859 6.8027 0.154851 6.87254 0.23275 6.92181L0.64275 7.18181L0.64375 7.18381L5.63875 10.3618L8.81675 15.3568L8.81875 15.3588L9.07875 15.7688C9.12817 15.8464 9.19805 15.9089 9.28068 15.9493C9.36332 15.9897 9.45551 16.0066 9.54711 15.998C9.63871 15.9894 9.72617 15.9558 9.79985 15.9007C9.87354 15.8456 9.9306 15.7712 9.96475 15.6858L15.9647 0.685806ZM14.1317 2.57581L6.63775 10.0698L6.42275 9.73181C6.38336 9.66978 6.33078 9.6172 6.26875 9.57781L5.93075 9.36281L13.4247 1.86881L14.6027 1.39781L14.1327 2.57581H14.1317Z" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div className="form-inner2">
-                                    <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" defaultValue id="contactCheck" />
-                                        <label className="form-check-label" htmlFor="contactCheck">
-                                            By subscribing, to get agree <strong>privacy policy.</strong>
-                                        </label>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <ul className="social-list">
-                            <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
-                            <li><a href="https://www.linkedin.com/"><i className="bx bxl-linkedin" /></a></li>
-                            <li><a href="https://www.youtube.com/"><i className="bx bxl-youtube" /></a></li>
-                            <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <header className={`header-area style-4 ${pathname === "/portfolio/carousel" || pathname === "/digital-agency" || pathname === "/digital-agency-dark" ? "position-absolute" : ""} ${state.scrollY > 20 ? "sticky" : ""}`}>
+            <header className={`header-area style-4 ${pathname === "/digital-agency" || pathname === "/digital-agency-dark" ? "position-absolute" : ""} ${state.scrollY > 20 ? "sticky" : ""}`}>
                 <div className="container-fluid d-flex flex-nowrap align-items-center justify-content-between">
                     <div className="company-logo">
                         <Link href="/" className="logo-dark"><img alt="image" className="img-fluid" src="/assets/img/header-logo.svg" /></Link>
@@ -237,279 +119,18 @@ const Header4 = () => {
                                 </div>
                             </div>
                             <ul className="menu-list">
-                                <li className={`menu-item-has-children position-inherit ${isHomeActive ? "active" : ""}`}>
-                                    <Link href="/" className="drop-down">
-                                        Home
-                                    </Link>
-                                    <i onClick={() => toggleMenu("HOME")} className={`bi bi-${state.activeMenu === "HOME" ? "dash" : "plus"} dropdown-icon`} />
-                                    <ul className={`sub-menu d-lg-none ${state.activeMenu === "HOME" ? "d-block" : "none"}`} >
-                                        <li className="">
-                                            <a href="#">Light Version</a>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("light")} className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "light" ? "dash" : "plus"} dropdown-icon`} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "light" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/" ? "active" : ""}><Link href="/">Startup Agency</Link></li>
-                                                <li className={pathname === "/fintech" ? "active" : ""}><Link href="/fintech">Fintech</Link></li>
-                                                <li className={pathname === "/digital-agency" ? "active" : ""}><Link href="/digital-agency">Digital Agency</Link></li>
-                                                <li className={pathname === "/marketing-agency" ? "active" : ""}><Link href="/marketing-agency">Marketing Agency</Link></li>
-                                                <li className={pathname === "/it-consulting" ? "active" : ""}><Link href="/it-consulting">IT Consulting</Link></li>
-                                                <li className={pathname === "/saas-product" ? "active" : ""}><Link href="/saas-product">SaaS Product</Link></li>
-                                                <li className={pathname === "/portfolio" ? "active" : ""}><Link href="/portfolio">Portfolio</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="#">Dark Version</a>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("dark")} className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "dark" ? "dash" : "plus"} dropdown-icon`} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "dark" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/" ? "active" : ""}><Link href="/startup-agency-dark">Startup Agency</Link></li>
-                                                <li className={pathname === "/fintech-dark" ? "active" : ""}><Link href="/fintech-dark">Fintech</Link></li>
-                                                <li className={pathname === "/digital-agency-dark" ? "active" : ""}><Link href="/digital-agency-dark">Digital Agency</Link></li>
-                                                <li className={pathname === "/marketing-agency-dark" ? "active" : ""}><Link href="/marketing-agency-dark">Marketing Agency</Link></li>
-                                                <li className={pathname === "/it-consulting-dark" ? "active" : ""}><Link href="/it-consulting-dark">IT Consulting</Link></li>
-                                                <li className={pathname === "/saas-product-dark" ? "active" : ""}><Link href="/saas-product-dark">SaaS Product</Link></li>
-                                                <li className={pathname === "/portfolio-dark" ? "active" : ""}><Link href="/portfolio-dark">Portfolio</Link></li>
-                                            </ul>
-                                        </li>
+                                <li className={pathname === "/" ? "active" : ""}>
+                                    <Link href="/">Home</Link>
+                                </li>
+                                <li className={`menu-item-has-children ${isCompanyActive ? "active" : ""}`}>
+                                    <Link href="/about" className="drop-down">Company</Link>
+                                    <i onClick={() => toggleMenu("company")} className={`bi bi-${state.activeMenu === "company" ? "dash" : "plus"} dropdown-icon`} />
+                                    <ul className={`sub-menu ${state.activeMenu === "company" ? "d-block" : "none"}`} >
+                                        <li className={pathname === "/about" ? "active" : ""}><Link href="/about">About Us</Link></li>
+                                        <li className={pathname === "/team" ? "active" : ""}><Link href="/team">Our Team</Link></li>
+                                        <li className={pathname === "/award-recognitions" ? "active" : ""}><Link href="/award-recognitions">Award & Recognitions</Link></li>
+                                        <li className={pathname === "/social-responsibility" ? "active" : ""}><Link href="/social-responsibility">Social Responsibility</Link></li>
                                     </ul>
-                                    <div className="mega-menu">
-                                        <div className="container">
-                                            <div className="row gy-5">
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/" || pathname === "/startup-agency-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img1.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/startup-agency-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/">Startup Agency</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/fintech" || pathname === "/fintech-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img2.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/fintech" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/fintech-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/fintech">Fintech</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/digital-agency" || pathname === "/digital-agency-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img3.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/digital-agency" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/digital-agency-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/digital-agency">Digital Agency</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/marketing-agency" || pathname === "/marketing-agency-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img4.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/marketing-agency" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/marketing-agency-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/marketing-agency">Marketing Agency</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/it-consulting" || pathname === "/it-consulting-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img5.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/it-consulting" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/it-consulting-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/it-consulting">IT Consulting</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/saas-product" || pathname === "/saas-product-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img6.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/saas-product" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/saas-product-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/saas-product">SaaS Product</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className={`single-menu-item ${pathname === "/portfolio" || pathname === "/portfolio-dark" ? "active" : ""}`}>
-                                                        <div className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img7.jpg" alt="" />
-                                                            <div className="home-version">
-                                                                <ul>
-                                                                    <li>
-                                                                        <Link href="/portfolio" className="light">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7 2.13828C7.22652 2.13828 7.41016 1.95464 7.41016 1.72812V0.410156C7.41016 0.183641 7.22652 0 7 0C6.77348 0 6.58984 0.183641 6.58984 0.410156V1.72812C6.58984 1.95464 6.77348 2.13828 7 2.13828ZM2.98225 3.56229C3.14243 3.72247 3.40211 3.72247 3.56229 3.56229C3.72247 3.40211 3.72247 3.14243 3.56229 2.98225L2.63036 2.05029C2.47018 1.89011 2.2105 1.89011 2.05032 2.05029C1.89014 2.21047 1.89014 2.47015 2.05032 2.63033L2.98225 3.56229ZM2.98208 10.4379L2.05015 11.3698C1.88997 11.53 1.88997 11.7897 2.05015 11.9498C2.21033 12.11 2.47002 12.11 2.6302 11.9498L3.56215 11.0179C3.72233 10.8577 3.72233 10.598 3.56215 10.4378C3.40197 10.2777 3.14226 10.2777 2.98208 10.4379ZM7 11.8617C6.77348 11.8617 6.58984 12.0454 6.58984 12.2719V13.5898C6.58984 13.8164 6.77348 14 7 14C7.22652 14 7.41016 13.8164 7.41016 13.5898V12.2719C7.41016 12.0454 7.22652 11.8617 7 11.8617ZM2.13828 7C2.13828 6.77348 1.95464 6.58984 1.72812 6.58984H0.410156C0.183641 6.58984 0 6.77348 0 7C0 7.22652 0.183641 7.41016 0.410156 7.41016H1.72812C1.95464 7.41016 2.13828 7.22652 2.13828 7ZM7 3.51457C5.07814 3.51457 3.51457 5.07814 3.51457 7C3.51457 8.92186 5.07814 10.4854 7 10.4854C8.92186 10.4854 10.4854 8.92186 10.4854 7C10.4854 5.07814 8.92186 3.51457 7 3.51457ZM11.0179 3.56213L11.9499 2.63017C12.1101 2.46999 12.1101 2.2103 11.9499 2.05012C11.7897 1.88995 11.53 1.88995 11.3698 2.05012L10.4379 2.98208C10.2777 3.14226 10.2777 3.40195 10.4379 3.56213C10.5981 3.7223 10.8577 3.7223 11.0179 3.56213ZM11.0178 10.4377C10.8576 10.2775 10.5979 10.2775 10.4377 10.4377C10.2775 10.5979 10.2775 10.8576 10.4377 11.0178L11.3697 11.9497C11.5298 12.1099 11.7895 12.1099 11.9497 11.9497C12.1099 11.7895 12.1099 11.5298 11.9497 11.3697L11.0178 10.4377ZM13.5898 6.58984H12.2719C12.0454 6.58984 11.8617 6.77348 11.8617 7C11.8617 7.22652 12.0454 7.41016 12.2719 7.41016H13.5898C13.8164 7.41016 14 7.22652 14 7C14 6.77348 13.8164 6.58984 13.5898 6.58984Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Light
-                                                                        </Link>
-                                                                    </li>
-                                                                    <li>
-                                                                        <Link href="/portfolio-dark">
-                                                                            <svg width={14} height={14} viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                                                <g>
-                                                                                    <path d="M7.24135 14C10.1123 13.998 12.6803 12.2445 13.7367 9.59536C13.7953 9.44832 13.727 9.39266 13.5866 9.46575C12.7818 9.88471 11.888 10.1036 10.9806 10.104C7.86082 10.1042 5.33169 7.57506 5.33188 4.45524C5.3323 3.64636 5.50645 2.84701 5.84254 2.11127C6.17863 1.37552 6.66883 0.720544 7.27996 0.190644C7.42672 0.0486062 7.38444 -0.0171645 7.09498 0.00382823C3.42058 0.029058 0.24231 3.13569 0.24231 7.00113C0.24231 10.8666 3.3758 14.0002 7.24135 14Z" />
-                                                                                </g>
-                                                                            </svg>
-                                                                            Dark
-                                                                        </Link>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <h5><Link href="/portfolio">Personal Portfolio</Link></h5>
-                                                    </div>
-                                                </div>
-                                                <div className="col-lg-3">
-                                                    <div className="single-menu-item">
-                                                        <a href="#" className="home-img">
-                                                            <img src="/assets/img/home1/mega-menu-home-img8.jpg" alt="" />
-                                                        </a>
-                                                        <h5><a href="#">SEO Agency</a></h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </li>
                                 <li className={`menu-item-has-children position-inherit ${pathname === "/industry/details" ? "active" : ""}`}>
                                     <Link href="/service" className="drop-down">Solution
@@ -672,104 +293,11 @@ const Header4 = () => {
                                         </div>
                                     </div>
                                 </li>
-                                <li className={`menu-item-has-children ${isCompanyActive ? "active" : ""}`}>
-                                    <Link href="/case-study" className="drop-down">Company</Link>
-                                    <i onClick={() => toggleMenu("company")} className={`bi bi-${state.activeMenu === "company" ? "dash" : "plus"} dropdown-icon`} />
-                                    <ul className={`sub-menu ${state.activeMenu === "company" ? "d-block" : "none"}`} >
-                                        <li><Link href="/about">Company</Link></li>
-                                        <li>
-                                            <Link href="/team">Our Team</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("team")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "team" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "team" ? "d-block" : "none"}`}>
-                                                <li><Link href="/team">Team Style 01</Link></li>
-                                                <li><Link href="/team/style2">Team Style 02</Link></li>
-                                                <li><Link href="/team/style3">Team Style 03</Link></li>
-                                                <li><Link href="/team/details">Team Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li><Link href="/award-recognitions">Award &amp; Recognitions</Link></li>
-                                        <li><Link href="/social-responsibility">Social Responsibility</Link></li>
-                                        <li className={pathname.startsWith('/service') ? "active" : ""}>
-                                            <Link href="/service">Services</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("service")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "service" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "service" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/service" ? "active" : ""}><Link href="/service">Service Style 01</Link></li>
-                                                <li className={pathname === "/service/style2" ? "active" : ""}><Link href="/service/style2">Service Style 02</Link></li>
-                                                <li className={pathname === "/service/details" ? "active" : ""}><Link href="/service/details">Service Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className={pathname.startsWith('/case') ? "active" : ""}>
-                                            <Link href="/case-study">Case Study</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("case-study")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "case-study" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "case-study" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/case-study" ? "active" : ""}><Link href="/case-study">Case Study Style 01</Link></li>
-                                                <li className={pathname === "/case-study/style2" ? "active" : ""}><Link href="/case-study/style2">Case Study Style 02</Link></li>
-                                                <li className={pathname === "/case-study/details" ? "active" : ""}><Link href="/case-study/details">Case Study Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className={pathname.startsWith('/news') ? "active" : ""}>
-                                            <Link href="/news-insight-grid">News &amp; Insight</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("news")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "news" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "news" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/news-insight-grid" ? "active" : ""}><Link href="/news-insight-grid">News &amp; Insight 01</Link></li>
-                                                <li className={pathname === "/news-insight-grid/style2" ? "active" : ""}><Link href="/news-insight-grid/style2">News &amp; Insight 02</Link></li>
-                                                <li className={pathname === "/news-insight-grid/style3" ? "active" : ""}><Link href="/news-insight-grid/style3">News &amp; Insight 03</Link></li>
-                                                <li className={pathname === "/news-insight-grid/details" ? "active" : ""}><Link href="/news-insight-grid/details">News &amp; Insight Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className={pathname === "/pricing" ? "active" : ""}><Link href="/pricing">Pricing Plan</Link></li>
-                                        <li className={pathname.startsWith('/career') ? "active" : ""}>
-                                            <Link href="/career">Career</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("carrer")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "carrer" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "carrer" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/career" ? "active" : ""} ><Link href="/career">Career</Link></li>
-                                                <li className={pathname === "/career/details" ? "active" : ""}><Link href="/career/details">Career Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className={pathname.startsWith('/shop') ? "active" : ""}>
-                                            <Link href="/shop">Shop</Link>
-                                            <i className="d-lg-flex d-none bi-caret-right-fill dropdown-icon" />
-                                            <i onClick={() => toggleSubMenu("shop")}
-                                                className={`d-lg-none d-flex bi bi-${state.activeSubMenu === "shop" ? "dash" : "plus"} dropdown-icon `} />
-                                            <ul className={`sub-menu ${state.activeSubMenu === "shop" ? "d-block" : "none"}`}>
-                                                <li className={pathname === "/shop" ? "active" : ""} ><Link href="/shop">Shop</Link></li>
-                                                <li className={pathname === "/cart" ? "active" : ""} ><Link href="/cart">Cart</Link></li>
-                                                <li className={pathname === "/checkout" ? "active" : ""} ><Link href="/checkout">Checkout</Link></li>
-                                                <li className={pathname === "/product-details" ? "active" : ""} ><Link href="/product-details">Product Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className={pathname === "/faq" ? "active" : ""}><Link href="/faq">FAQ’s</Link></li>
-                                        <li className={pathname === "/contact" ? "active" : ""}><Link href="/contact">Contact Us</Link></li>
-                                    </ul>
-                                </li>
-                                <li className={`menu-item-has-children ${isPortfolioActive ? "active" : ""}`}>
-                                    <Link href="/news-insight-grid" className="drop-down">Portfolio </Link>
-                                    <i onClick={() => toggleMenu("portfolio")} className={`bi bi-${state.activeMenu === "portfolio" ? "dash" : "plus"} dropdown-icon`} />
-                                    <ul className={`sub-menu ${state.activeMenu === "portfolio" ? "d-block" : "none"}`}>
-                                        <li className={pathname === "/portfolio/classic" ? "active" : ""} ><Link href="/portfolio/classic">Portfolio Classic</Link></li>
-                                        <li className={pathname === "/portfolio/creative" ? "active" : ""}><Link href="/portfolio/creative">Portfolio Creative</Link></li>
-                                        <li className={pathname === "/portfolio/caption" ? "active" : ""}><Link href="/portfolio/caption">Portfolio Caption</Link></li>
-                                        <li className={pathname === "/portfolio/horizontal" ? "active" : ""}><Link href="/portfolio/horizontal">Portfolio Horizontal</Link></li>
-                                        <li className={pathname === "/portfolio/carousel" ? "active" : ""}><Link href="/portfolio/carousel">Portfolio Carousel</Link></li>
-                                        <li className={pathname === "portfolio/vertical" ? "active" : ""}><Link href="/portfolio/vertical">Portfolio Vertical</Link></li>
-                                        <li className={pathname === "/portfolio/interactive-link" ? "active" : ""}><Link href="/portfolio/interactive-link">Interactive Link</Link></li>
-                                        <li className={pathname === "/portfolio/grid" ? "active" : ""}><Link href="/portfolio/grid">Portfolio Grid</Link></li>
-                                        <li className={pathname === "/portfolio/details" ? "active" : ""}><Link href="/portfolio/details">Portfolio Details</Link></li>
-                                    </ul>
+                                <li className={pathname === "/pricing" ? "active" : ""}>
+                                    <Link href="/pricing">Pricing Plan</Link>
                                 </li>
                                 <li className="menu-item-has-children position-inherit">
-                                    <a href="#" className="drop-down">Resources
-                                    </a>
+                                    <a href="#" className="drop-down">Resources</a>
                                     <i onClick={() => toggleMenu("resources")} className={`bi bi-${state.activeMenu === "resources" ? "dash" : "plus"} dropdown-icon`} />
                                     <div className={`mega-menu2 two ${state.activeMenu === "resources" ? "d-block" : "none"}`}>
                                         <div className="container">
@@ -871,7 +399,7 @@ const Header4 = () => {
                                                                             <svg width={19} height={14} viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
                                                                                 <path d="M1.5 1C1.5 0.723858 1.27614 0.5 1 0.5C0.723858 0.5 0.5 0.723858 0.5 1H1.5ZM19 11L14 8.11325V13.8868L19 11ZM0.5 1V6H1.5V1H0.5ZM6 11.5H14.5V10.5H6V11.5ZM0.5 6C0.5 9.03757 2.96243 11.5 6 11.5V10.5C3.51472 10.5 1.5 8.48528 1.5 6H0.5Z" />
                                                                             </svg>
-                                                                            News &amp; Insight
+                                                                            News & Insight
                                                                         </span>
                                                                         <div className="arrow">
                                                                             <svg width={7} height={9} viewBox="0 0 7 9" xmlns="http://www.w3.org/2000/svg">
@@ -901,7 +429,7 @@ const Header4 = () => {
                                                                             <svg width={19} height={14} viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
                                                                                 <path d="M1.5 1C1.5 0.723858 1.27614 0.5 1 0.5C0.723858 0.5 0.5 0.723858 0.5 1H1.5ZM19 11L14 8.11325V13.8868L19 11ZM0.5 1V6H1.5V1H0.5ZM6 11.5H14.5V10.5H6V11.5ZM0.5 6C0.5 9.03757 2.96243 11.5 6 11.5V10.5C3.51472 10.5 1.5 8.48528 1.5 6H0.5Z" />
                                                                             </svg>
-                                                                            Webinars &amp; Events
+                                                                            Webinars & Events
                                                                         </span>
                                                                         <div className="arrow">
                                                                             <svg width={7} height={9} viewBox="0 0 7 9" xmlns="http://www.w3.org/2000/svg">
@@ -939,6 +467,9 @@ const Header4 = () => {
                                         </div>
                                     </div>
                                 </li>
+                                <li className={pathname === "/contact" ? "active" : ""}>
+                                    <Link href="/contact">Contact Us</Link>
+                                </li>
                             </ul>
                             <div className="btn-and-contact-area d-lg-none d-block">
                                 <Link href="/contact" className="primary-btn4">
@@ -963,7 +494,7 @@ const Header4 = () => {
                                 </div>
                                 <div className="content">
                                     <span>Our Support</span>
-                                    <h6><a href="tel:+997636844563">+99-763 684 4563 </a></h6>
+                                    <h6><a href="tel:(346) 214-6888">(346) 214-6888 </a></h6>
                                 </div>
                             </div>
                             <Link href="/contact" className="primary-btn4 d-lg-flex d-none">

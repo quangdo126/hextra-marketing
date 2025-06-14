@@ -103,12 +103,12 @@ const Home3Footer = () => {
                   </div>
                   <ul className="location-list">
                     <li>
-                      <span>New York</span>
-                      <a href="https://www.google.com/maps">123 Business St., Suite 456, City, State, ZIP Code, Country</a>
+                      <span>Stafford, TX</span>
+                      <a href="#">12707 Murphy Rd,<br></br> Stafford, TX 77477</a>
                     </li>
                     <li>
-                      <span>Australia</span>
-                      <a href="https://www.google.com/maps">123 Innovation Road, Suite 101Tech City, State, ZIP Code Country</a>
+                      <span>Sheridan, WY</span>
+                      <a href="#">30 N Gould St Ste R,<br></br> Sheridan, Wyoming 82801</a>
                     </li>
                   </ul>
                 </div>
@@ -126,12 +126,12 @@ const Home3Footer = () => {
                         </div>
                         <div className="content">
                           <span>Send Us Mail</span>
-                          <a href="mailto:info@example.com">info@example.com</a>
+                          <a href="mailto:support@hextra.us">support@hextra.us</a>
                         </div>
                       </li>
                     </ul>
                   </div>
-                  <a href="https://www.google.com/maps" className="primary-btn1 transparent">
+                  <a href="https://maps.app.goo.gl/iqeSj7yuHHfLyBBe8" className="primary-btn1 transparent">
                     <span>View Site Map
                       <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -186,11 +186,10 @@ const Home3Footer = () => {
                         <div className="social-area">
                           <h5>Let’s Connect</h5>
                           <ul className="social-list">
-                            <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
-                           
-                            <li><a href="https://www.linkedin.com/"><i className="bx bxl-linkedin" /></a></li>
-                            <li><a href="https://www.youtube.com/"><i className="bx bxl-youtube" /></a></li>
-                            <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram-alt" /></a></li>
+                            <li><a href="https://www.facebook.com/hextramarketing"><i className="bx bxl-facebook" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/hextra-marketing"><i className="bx bxl-linkedin" /></a></li>
+                            <li><a href="https://www.youtube.com/@hextramarketing"><i className="bx bxl-youtube" /></a></li>
+                            <li><a href="https://www.instagram.com/hextramarketing"><i className="bx bxl-instagram-alt" /></a></li>
                           </ul>
                         </div>
                       </div>
@@ -204,7 +203,7 @@ const Home3Footer = () => {
         <div className="footer-bottom">
           <div className="container">
             <div className="copyright-and-social-area">
-              <p>Copyright 2025 <a href="https://www.egenslab.com/">Egens Lab</a> | All Right Reserved.</p>
+              <p>Copyright 2025 <a href="https://www.egenslab.com/">Hextra</a> | All Right Reserved.</p>
               <div className="terms-condition">
                 <svg width={12} height={12} viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                   <g>
@@ -212,7 +211,7 @@ const Home3Footer = () => {
                     <path fillRule="evenodd" clipRule="evenodd" d="M11.3969 1C11.556 1 11.7086 1.06585 11.8212 1.18306C11.9337 1.30027 11.9969 1.45924 11.9969 1.625V10.375C11.9969 10.5408 11.9337 10.6997 11.8212 10.8169C11.7086 10.9342 11.556 11 11.3969 11C11.2378 11 11.0851 10.9342 10.9726 10.8169C10.8601 10.6997 10.7969 10.5408 10.7969 10.375V1.625C10.7969 1.45924 10.8601 1.30027 10.9726 1.18306C11.0851 1.06585 11.2378 1 11.3969 1Z" />
                   </g>
                 </svg>
-                <p>Our Business <a href="#">Policy, Terms &amp; Condition</a></p>
+                <p>Our Business <a href="#">Policy</a> &amp; <a href="#">Terms &amp; Condition</a></p>
               </div>
             </div>
           </div>
