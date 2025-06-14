@@ -220,7 +220,7 @@ const AboutPage = () => {
                                         forwardedRef={ref3}
                                         as="span"
                                         className="counter"
-                                    /></h2>
+                                    />+</h2>
                                     <p>World-Wide Clients</p>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ const AboutPage = () => {
                                         as="span"
                                         className="counter"
                                     />+</h2>
-                                    <p>Professional Expert</p>
+                                    <p>Professional Experts</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-center divider">
@@ -277,7 +277,7 @@ const AboutPage = () => {
                                         <path d="M88 0V64H0L88 0Z" />
                                         <path d="M60 8L10 44V8H60Z" />
                                     </svg>
-                                    <h2>Make A Innovative Solutions.</h2>
+                                    <h2>Make A Innovative Solution.</h2>
                                 </div>
                                 <p>Smart solution to build a outstanding performance easily.</p>
                             </div>
@@ -286,7 +286,7 @@ const AboutPage = () => {
                     <div className="row g-4 mb-50">
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                             <div className="single-feature">
-                                <h4>Expertise &amp; <br />Specialization</h4>
+                                <h4>Expertise & <br />Specialization</h4>
                                 <ul>
                                     <li>+ Social Media Marketing</li>
                                     <li>+ Email Marketing</li>
@@ -299,7 +299,7 @@ const AboutPage = () => {
                                             <path d="M20.8023 15.9137C19.0355 15.1297 17.7594 13.5216 17.3864 11.5918C17.033 13.5216 15.7373 15.1297 13.9705 15.9137C13.6367 16.0745 12.7729 16.2957 12.7729 16.2957C12.7729 16.2957 13.6171 16.5369 13.9705 16.6776C15.7373 17.4616 17.0134 19.0697 17.3864 20.9995C17.7594 19.0898 19.0355 17.4817 20.8023 16.6977C21.1361 16.5369 21.9999 16.3158 21.9999 16.3158C21.9999 16.3158 21.1361 16.0745 20.8023 15.9137Z" />
                                         </g>
                                     </svg>
-                                    Agencies can ensure consistent and regular marketing efforts.
+                                    Our team brings deep expertise and specialized skills in digital marketing, ensuring tailored strategies that elevate your brand's online presence.
                                 </p>
                             </div>
                         </div>
@@ -318,16 +318,16 @@ const AboutPage = () => {
                                             <path d="M20.8023 15.9137C19.0355 15.1297 17.7594 13.5216 17.3864 11.5918C17.033 13.5216 15.7373 15.1297 13.9705 15.9137C13.6367 16.0745 12.7729 16.2957 12.7729 16.2957C12.7729 16.2957 13.6171 16.5369 13.9705 16.6776C15.7373 17.4616 17.0134 19.0697 17.3864 20.9995C17.7594 19.0898 19.0355 17.4817 20.8023 16.6977C21.1361 16.5369 21.9999 16.3158 21.9999 16.3158C21.9999 16.3158 21.1361 16.0745 20.8023 15.9137Z" />
                                         </g>
                                     </svg>
-                                    Agencies can ensure consistent and regular marketing efforts.
+                                    We provide cost-effective branding solutions that maximize your ROI, delivering high-quality designs without breaking your budget.
                                 </p>
                             </div>
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
                             <div className="single-feature">
-                                <h4>Consistency &amp; <br />Reliability</h4>
+                                <h4>Consistency & <br />Reliability</h4>
                                 <ul>
                                     <li>+ Blog Writing</li>
-                                    <li>+ Copywriting &amp; Copyediting</li>
+                                    <li>+ Copywriting & Copyediting</li>
                                     <li>+ Video Production</li>
                                 </ul>
                                 <p>
@@ -337,7 +337,7 @@ const AboutPage = () => {
                                             <path d="M20.8023 15.9137C19.0355 15.1297 17.7594 13.5216 17.3864 11.5918C17.033 13.5216 15.7373 15.1297 13.9705 15.9137C13.6367 16.0745 12.7729 16.2957 12.7729 16.2957C12.7729 16.2957 13.6171 16.5369 13.9705 16.6776C15.7373 17.4616 17.0134 19.0697 17.3864 20.9995C17.7594 19.0898 19.0355 17.4817 20.8023 16.6977C21.1361 16.5369 21.9999 16.3158 21.9999 16.3158C21.9999 16.3158 21.1361 16.0745 20.8023 15.9137Z" />
                                         </g>
                                     </svg>
-                                    Agencies can ensure consistent and regular marketing efforts.
+                                    We deliver consistent, reliable content and video services, ensuring your brand maintains a strong, trustworthy online presence over time.
                                 </p>
                             </div>
                         </div>
