@@ -264,7 +264,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={5000}
-                                            speed={10}
+                                            speed={1}
                                             forwardedRef={ref6}
                                             as="h2"
                                             className="counter"
@@ -283,7 +283,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={4000}
-                                            speed={10}
+                                            speed={1}
                                             forwardedRef={ref3}
                                             as="h2"
                                             className="counter"
@@ -302,7 +302,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={12}
-                                            speed={50}
+                                            speed={150}
                                             forwardedRef={ref4}
                                             as="h2"
                                             className="counter"
@@ -321,7 +321,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={95}
-                                            speed={50}
+                                            speed={20}
                                             forwardedRef={ref5}
                                             as="h2"
                                             className="counter"
