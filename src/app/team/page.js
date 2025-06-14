@@ -212,7 +212,7 @@ const TeamPage = () => {
                         <div className="col-lg-5">
                             <div className="section-title three text-lg-start text-center">
                                 <h2>Our Leadership</h2>
-                                <p>Smart solution to build a outstanding performance easily.</p>
+                                <p>Guiding our team with visionary strategies and expert decision-making to drive exceptional business success.</p>
                             </div>
                         </div>
                     </div>
@@ -370,7 +370,7 @@ const TeamPage = () => {
                         <div className="col-lg-5">
                             <div className="section-title three text-lg-start text-center">
                                 <h2>Development</h2>
-                                <p>Smart solution to build a outstanding performance easily.</p>
+                                <p>Crafting innovative, high-quality solutions with cutting-edge technology to enhance performance and scalability.</p>
                             </div>
                         </div>
                     </div>
@@ -636,7 +636,7 @@ const TeamPage = () => {
                         <div className="col-lg-5">
                             <div className="section-title three text-lg-start text-center">
                                 <h2>Master of Design </h2>
-                                <p>Smart solution to build a outstanding performance easily.</p>
+                                <p>Creating stunning, user-centric designs that elevate brand identity and deliver an outstanding visual experience.</p>
                             </div>
                         </div>
                     </div>
