@@ -264,7 +264,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={5000}
-                                            speed={100}
+                                            speed={10}
                                             forwardedRef={ref6}
                                             as="h2"
                                             className="counter"
@@ -283,7 +283,7 @@ const Home4ServiceSection = () => {
                                         <Counter
                                             start={0}
                                             end={4000}
-                                            speed={100}
+                                            speed={10}
                                             forwardedRef={ref3}
                                             as="h2"
                                             className="counter"
