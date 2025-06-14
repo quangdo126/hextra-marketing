@@ -505,42 +505,6 @@ const CaseStudyPage = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="pagination-area wow animate fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
-                        <div className="paginations-button">
-                            <a href="#">
-                                <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M7.86133 9.28516C7.14704 7.49944 3.57561 5.71373 1.43276 4.99944C3.57561 4.28516 6.7899 3.21373 7.86133 0.713728" strokeWidth="1.5" strokeLinecap="round" />
-                                    </g>
-                                </svg>
-                                Prev
-                            </a>
-                        </div>
-                        <ul className="paginations">
-                            <li className="page-item active">
-                                <a href="#">01</a>
-                            </li>
-                            <li className="page-item">
-                                <a href="#">02</a>
-                            </li>
-                            <li className="page-item">
-                                <a href="#">03</a>
-                            </li>
-                            <li className="page-item">
-                                <a href="#">04</a>
-                            </li>
-                        </ul>
-                        <div className="paginations-button">
-                            <a href="#">
-                                Next
-                                <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                    <g>
-                                        <path d="M1.42969 9.28613C2.14397 7.50042 5.7154 5.7147 7.85826 5.00042C5.7154 4.28613 2.50112 3.21471 1.42969 0.714705" strokeWidth="1.5" strokeLinecap="round" />
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             {/* Case Study Page End */}
