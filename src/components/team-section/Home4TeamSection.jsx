@@ -66,7 +66,7 @@ const Home4TeamSection = () => {
                                 <div className="col-xl-5 col-md-6 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                                     <div className="section-title2">
                                         <h2><strong>We’ve Most</strong> Talented Team.</h2>
-                                        <p>To provide most expensive work for our clients in the world-wide.</p>
+                                        <p>To provide most effective work for our clients in the world-wide.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-3 col-md-6 d-flex justify-content-md-end wow animate fadeInRight" data-wow-delay="200ms" data-wow-duration="1500ms">

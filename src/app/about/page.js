@@ -214,21 +214,21 @@ const AboutPage = () => {
                             <div className="col-lg-3 col-sm-6 d-flex justify-content-lg-start justify-content-sm-center divider">
                                 <div className="single-counter">
                                     <h2><Counter
-                                        start={0}
-                                        end={10}
-                                        speed={100}
+                                        start={3500}
+                                        end={4000}
+                                        speed={1}
                                         forwardedRef={ref3}
                                         as="span"
                                         className="counter"
                                     /></h2>
-                                    <p>World-Wide Branches</p>
+                                    <p>World-Wide Clients</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-center divider">
                                 <div className="single-counter">
                                     <h2><Counter
                                         start={0}
-                                        end={50}
+                                        end={20}
                                         speed={20}
                                         forwardedRef={ref3}
                                         as="span"
@@ -240,9 +240,9 @@ const AboutPage = () => {
                             <div className="col-lg-3 col-sm-6 d-flex justify-content-sm-center divider">
                                 <div className="single-counter">
                                     <h2><Counter
-                                        start={0}
-                                        end={145}
-                                        speed={10}
+                                        start={4500}
+                                        end={5000}
+                                        speed={1}
                                         forwardedRef={ref3}
                                         as="span"
                                         className="counter"
@@ -254,7 +254,7 @@ const AboutPage = () => {
                                 <div className="single-counter">
                                     <h2><Counter
                                         start={0}
-                                        end={5}
+                                        end={8}
                                         speed={100}
                                         forwardedRef={ref3}
                                         as="span"
@@ -373,7 +373,7 @@ const AboutPage = () => {
                         <div className="col-xl-5 col-lg-6">
                             <div className="section-title three">
                                 <h2>Our Dynamic Team</h2>
-                                <p>Smart solution to build a outstanding performance easily.</p>
+                                <p>To provide most effective work for our clients in the world-wide.</p>
                             </div>
                         </div>
                     </div>
@@ -735,13 +735,14 @@ const AboutPage = () => {
                     ]}
                 />
             </div>
+            <Home3PartnerSection />
             <div className="about-page-testimonial-section">
                 <div className="container">
                     <div className="row justify-content-center mb-70 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
                         <div className="col-lg-5">
                             <div className="section-title three">
                                 <h2>They Loves Us</h2>
-                                <p>We’re the greatest part on the digital platform &amp; to achieve many awards.</p>
+                                <p>This feedback acknowledges strengths while providing constructive input for improvement.</p>
                             </div>
                         </div>
                     </div>
