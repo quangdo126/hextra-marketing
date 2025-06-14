@@ -97,7 +97,7 @@ const Home4Banner = () => {
                   <div className="content">
                     <div className="number">
                       <Counter
-                        start={0}
+                        start={2}
                         end={5}
                         speed={100}
                         forwardedRef={ref3}
