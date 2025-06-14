@@ -69,7 +69,7 @@ const TeamPage = () => {
                                         <Counter
                                             start={4500}
                                             end={5000}
-                                            speed={10}
+                                            speed={1}
                                             forwardedRef={ref2}
                                             as="h2"
                                             className="counter"
@@ -85,7 +85,7 @@ const TeamPage = () => {
                                         <Counter
                                             start={3500}
                                             end={4000}
-                                            speed={10}
+                                            speed={1}
                                             forwardedRef={ref4}
                                             as="h2"
                                             className="counter"
@@ -160,7 +160,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are passionate about staying at the forefront of <span>digital trends</span> and <span>technologies.</span> By constantly pushing boundaries, we deliver fresh, cutting-edge solutions that help our clients stand out in the competitive digital landscape.
+                                                We are driven by a passion for pioneering new ideas and embracing <span>advanced technologies</span> to create innovative solutions that propel our clients forward.
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are passionate about staying at the forefront of <span>digital trends</span> and <span>technologies.</span> By constantly pushing boundaries, we deliver fresh, cutting-edge solutions that help our clients stand out in the competitive digital landscape.
+                                                Our motivation stems from putting <span>client needs</span> first, building strong relationships, and delivering personalized solutions that exceed expectations.
                                             </div>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are passionate about staying at the forefront of <span>digital trends</span> and <span>technologies.</span> By constantly pushing boundaries, we deliver fresh, cutting-edge solutions that help our clients stand out in the competitive digital landscape.
+                                                We thrive on teamwork, fostering <span>open communication</span> and synergy with our clients and team to achieve shared success.
                                             </div>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are passionate about staying at the forefront of <span>digital trends</span> and <span>technologies.</span> By constantly pushing boundaries, we deliver fresh, cutting-edge solutions that help our clients stand out in the competitive digital landscape.
+                                                We are committed to constant growth, seeking <span>new skills</span> and refining our processes to deliver ever-better results for our clients.
                                             </div>
                                         </div>
                                     </div>
