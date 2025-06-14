@@ -1,5 +1,5 @@
 import GallerySection from '@/components/common/GallerySection'
-import Home3Footer from '@/components/footer/Footer'
+import Home3Footer from '@/components/footer/Footer3'
 import Header3 from '@/components/header/Header3'
 import Link from 'next/link'
 import React from 'react'
