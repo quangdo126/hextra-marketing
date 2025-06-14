@@ -190,9 +190,9 @@ const Home4ServiceSection = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div className="service-card3 four magnetic-item">
-                                <h4><Link href="/service/details">Hexcore <br /> App.</Link></h4>
+                                <h4><Link href="/service/details">Hexcore <br /> All-In-One App.</Link></h4>
                                 <ul>
-                                    <li>+ All-in-one Solution</li>
+                                    <li>+ All-In-One Solution</li>
                                     <li>+ Payment Processing</li>
                                     <li>+ Remote Management</li>
                                 </ul>
@@ -415,54 +415,54 @@ const Home4ServiceSection = () => {
                             <div className="industry-list" ref={industryListRef}>
                                 <ul>
                                     <li className="active">
-                                        <h2><Link href="/industry/details">Health Care</Link></h2>
+                                        <h2><Link href="/industry/details">Nail Salon</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Develop a professional website and tailored marketing solutions for <strong>Nail Salons</strong> to showcase services, book appointments, and boost online visibility.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Pet Care &amp; Shop</Link></h2>
+                                        <h2><Link href="/industry/details">Hair Salon</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Create a stylish website and effective marketing strategies for <strong>Hair Salons</strong> to highlight services, customer reviews, and attract new clients.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Entertainment</Link></h2>
+                                        <h2><Link href="/industry/details">Beauty Salon</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Design a sophisticated website and targeted marketing campaigns for <strong>Beauty Salons</strong> to promote treatments and enhance customer engagement.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Ecommerce</Link></h2>
+                                        <h2><Link href="/industry/details">Restaurant</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Build an appetizing website and comprehensive marketing solutions for <strong>Restaurants</strong> to display menus, handle reservations, and increase foot traffic.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Finance &amp; Banking</Link></h2>
+                                        <h2><Link href="/industry/details">Real Estate Agent</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Craft a professional website and strategic marketing plans for <strong>Real Estate Agents</strong> to list properties and connect with potential clients.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
                                         </div>
                                     </li>
                                     <li>
-                                        <h2><Link href="/industry/details">Hospitality &amp; Travel</Link></h2>
+                                        <h2><Link href="/industry/details">Insurance Agent</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
+                                            <p>Develop a secure website and effective marketing solutions for <strong>Insurance Agents</strong> to offer plans and provide client support.</p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
