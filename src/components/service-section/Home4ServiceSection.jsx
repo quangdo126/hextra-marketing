@@ -227,7 +227,7 @@ const Home4ServiceSection = () => {
                                             </svg>
                                             <h2><strong>Real Data-Driven</strong> Website Marketing.</h2>
                                         </div>
-                                        <p>Companies need innovative ideas to engage their target audience.</p>
+                                        <p>Businesses need innovative ideas to engage their target audience.</p>
                                     </div>
                                 </div>
                                 <div className="col-xl-4 col-lg-2 d-lg-flex d-none justify-content-lg-end">
@@ -263,8 +263,8 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={235}
-                                            speed={10}
+                                            end={5000}
+                                            speed={100}
                                             forwardedRef={ref6}
                                             as="h2"
                                             className="counter"
@@ -282,8 +282,8 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={23}
-                                            speed={20}
+                                            end={4000}
+                                            speed={100}
                                             forwardedRef={ref3}
                                             as="h2"
                                             className="counter"
@@ -301,7 +301,7 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={8}
+                                            end={12}
                                             speed={50}
                                             forwardedRef={ref4}
                                             as="h2"
@@ -320,8 +320,8 @@ const Home4ServiceSection = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={35}
-                                            speed={20}
+                                            end={95}
+                                            speed={50}
                                             forwardedRef={ref5}
                                             as="h2"
                                             className="counter"
@@ -417,7 +417,7 @@ const Home4ServiceSection = () => {
                                     <li className="active">
                                         <h2><Link href="/industry/details">Health Care</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
@@ -426,7 +426,7 @@ const Home4ServiceSection = () => {
                                     <li>
                                         <h2><Link href="/industry/details">Pet Care &amp; Shop</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
@@ -435,7 +435,7 @@ const Home4ServiceSection = () => {
                                     <li>
                                         <h2><Link href="/industry/details">Entertainment</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
@@ -444,7 +444,7 @@ const Home4ServiceSection = () => {
                                     <li>
                                         <h2><Link href="/industry/details">Ecommerce</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
@@ -453,7 +453,7 @@ const Home4ServiceSection = () => {
                                     <li>
                                         <h2><Link href="/industry/details">Finance &amp; Banking</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>
@@ -462,7 +462,7 @@ const Home4ServiceSection = () => {
                                     <li>
                                         <h2><Link href="/industry/details">Hospitality &amp; Travel</Link></h2>
                                         <div className="industry-content">
-                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare companies.</strong></p>
+                                            <p>Establish a consistent and trustworthy brand identity for <strong>Hospitals, Clinics,</strong> &amp; <strong>Healthcare Businesses.</strong></p>
                                             <svg className="divider" width={313} height={6} viewBox="0 0 313 6" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M1 2.5C0.723858 2.5 0.5 2.72386 0.5 3C0.5 3.27614 0.723858 3.5 1 3.5V2.5ZM313 3L308 0.113249V5.88675L313 3ZM1 3.5H308.5V2.5H1V3.5Z" />
                                             </svg>

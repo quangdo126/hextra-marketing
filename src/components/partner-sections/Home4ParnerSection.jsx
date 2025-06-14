@@ -6,7 +6,7 @@ const Home4ParnerSection = () => {
       <div className="container">
         <div className="partner-title-area wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">
           <h6>Our Globally <span>4K+</span> Clients.</h6>
-          <h6>Our Happy Cleints <span>95%+</span></h6>
+          <h6>Our Happy Clients <span>95%+</span></h6>
         </div>
         <div className="partner-wrap">
           <div className="marquee light">
