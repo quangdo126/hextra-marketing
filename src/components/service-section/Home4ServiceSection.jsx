@@ -361,7 +361,7 @@ const Home4ServiceSection = () => {
                         <div className="col-lg-3 col-md-4">
                             <div className="result-area">
                                 <span>100%</span>
-                                <p>Measurable Results &amp; ROI.</p>
+                                <p>Our Expertise Across Industries.</p>
                                 <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
                                 </svg>
