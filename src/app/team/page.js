@@ -160,7 +160,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are driven by a passion for pioneering new ideas and embracing <span>advanced technologies</span> to create innovative solutions that propel our clients forward.
+                                                We are fueled by a relentless passion for innovation, staying ahead of the curve with cutting-edge <span>digital marketing trends</span> and <span>advanced technologies</span>. Our team continuously explores new strategies and tools to develop groundbreaking solutions, ensuring our clients gain a competitive edge in the ever-evolving digital landscape. From pioneering website designs to revolutionary marketing campaigns, we strive to deliver fresh, impactful results that resonate with your audience and boost your online presence.
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                Our motivation stems from putting <span>client needs</span> first, building strong relationships, and delivering personalized solutions that exceed expectations.
+                                                Our driving force is a deep commitment to a <span>client-centered approach</span>, prioritizing your unique needs and goals above all else. We build long-lasting partnerships by offering personalized digital marketing services, custom website development, and tailored strategies that align with your business objectives. By listening to your vision and adapting to your feedback, we ensure every solution enhances your brand’s success and fosters customer trust in the competitive market.
                                             </div>
                                         </div>
                                     </div>
@@ -184,7 +184,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We thrive on teamwork, fostering <span>open communication</span> and synergy with our clients and team to achieve shared success.
+                                                Collaboration is at the heart of what drives us, fostering a culture of <span>open communication</span> and teamwork with both our clients and internal team. We believe that combining diverse perspectives leads to exceptional digital marketing outcomes and innovative website designs. By working closely with you, we create cohesive strategies that amplify your brand’s voice, enhance user engagement, and deliver measurable results in the digital space.
                                             </div>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@ const TeamPage = () => {
                                         </h2>
                                         <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                             <div className="accordion-body">
-                                                We are committed to constant growth, seeking <span>new skills</span> and refining our processes to deliver ever-better results for our clients.
+                                                We are dedicated to <span>continuous improvement</span>, constantly seeking new skills, industry insights, and refined processes to elevate our digital marketing and website development services. Our commitment to growth ensures we stay updated with the latest SEO techniques, design trends, and technology advancements, delivering top-tier solutions that help your business thrive. This ongoing evolution guarantees sustained success and higher rankings for your brand online.
                                             </div>
                                         </div>
                                     </div>
