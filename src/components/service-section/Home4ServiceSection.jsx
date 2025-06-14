@@ -148,31 +148,11 @@ const Home4ServiceSection = () => {
                                 </svg>
                             </div>
                         </div>
-                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
-                            <div className="service-card3 three magnetic-item">
-                                <h4><Link href="/service/details">Paid <br /> Advertising.</Link></h4>
-                                <ul>
-                                    <li>+ Social Media Marketing</li>
-                                    <li>+ Email Marketing</li>
-                                    <li>+ Content Marketing</li>
-                                </ul>
-                                <Link href="/service/details" className="primary-btn3 three btn-hover">
-                                    View Details
-                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
-                                    </svg>
-                                    <span />
-                                </Link>
-                                <svg className="shape" width={68} height={250} viewBox="0 0 68 250" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M68 0H60V250H68V0ZM48 173H40V250H48V173ZM20 73H28V250H20V73ZM8 134H0V250H8V134Z" />
-                                </svg>
-                            </div>
-                        </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div className="service-card3 magnetic-item">
+                            <div className="service-card3 three magnetic-item">
                                 <h4><Link href="/service/details">Marketing <br /> Automation.</Link></h4>
                                 <ul>
-                                    <li>+ Email Drip Campaigns</li>
+                                    <li>+ Email Drop Campaigns</li>
                                     <li>+ Lead Scoring &amp; Nurturing</li>
                                     <li>+ Workflow Automation</li>
                                 </ul>
@@ -188,13 +168,33 @@ const Home4ServiceSection = () => {
                                 </svg>
                             </div>
                         </div>
+                        <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="800ms" data-wow-duration="1500ms">
+                            <div className="service-card3 magnetic-item">
+                                <h4><Link href="/service/details">Website <br /> Design.</Link></h4>
+                                <ul>
+                                    <li>+ UI/UX Design</li>
+                                    <li>+ Web Development</li>
+                                    <li>+ SEO Optimization</li>
+                                </ul>
+                                <Link href="/service/details" className="primary-btn3 three btn-hover">
+                                    View Details
+                                    <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
+                                    </svg>
+                                    <span />
+                                </Link>
+                                <svg className="shape" width={68} height={250} viewBox="0 0 68 250" xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M68 0H60V250H68V0ZM48 173H40V250H48V173ZM20 73H28V250H20V73ZM8 134H0V250H8V134Z" />
+                                </svg>
+                            </div>
+                        </div>
                         <div className="col-lg-4 col-md-6 wow animate fadeInDown" data-wow-delay="400ms" data-wow-duration="1500ms">
                             <div className="service-card3 four magnetic-item">
-                                <h4><Link href="/service/details">Affiliate <br /> Marketing.</Link></h4>
+                                <h4><Link href="/service/details">Hexcore <br /> App.</Link></h4>
                                 <ul>
-                                    <li>+ Partner Outreach</li>
-                                    <li>+ Affiliate Program Strategy</li>
-                                    <li>+ Affiliate Campaign</li>
+                                    <li>+ All-in-one Solution</li>
+                                    <li>+ Payment Processing</li>
+                                    <li>+ Remote Management</li>
                                 </ul>
                                 <Link href="/service/details" className="primary-btn3 three btn-hover">
                                     View Details
