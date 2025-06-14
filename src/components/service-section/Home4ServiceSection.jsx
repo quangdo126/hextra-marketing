@@ -326,7 +326,7 @@ const Home4ServiceSection = () => {
                                             as="h2"
                                             className="counter"
                                         />
-                                        <span>+</span>
+                                        <span>%+</span>
                                     </div>
                                     <p>Clients <br />Retention Rate.</p>
                                 </div>
