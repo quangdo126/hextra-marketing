@@ -312,13 +312,13 @@ const Header4 = () => {
                                                     <div className="row">
                                                         <div className="col-lg-6">
                                                             <div className="menu-blog-card">
-                                                                <Link href="/news-insight-grid/details" className="blog-img">
+                                                                <Link href="/news-blog/details" className="blog-img">
                                                                     <img src="/assets/img/home1/menu-blog-img1.jpg" alt="" />
                                                                 </Link>
                                                                 <div className="blog-content">
                                                                     <ul className="blog-meta">
                                                                         <li>
-                                                                            <Link href="/news-insight-grid">
+                                                                            <Link href="/news-blog">
                                                                                 <svg width={8} height={8} viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                                                                                     <g>
                                                                                         <path d="M0.800781 8V0L7.20078 4L0.800781 8Z" />
@@ -328,13 +328,13 @@ const Header4 = () => {
                                                                             </Link>
                                                                         </li>
                                                                         <li className="blog-date">
-                                                                            <Link href="/news-insight-grid">
+                                                                            <Link href="/news-blog">
                                                                                 03 Nov, 2024
                                                                             </Link>
                                                                         </li>
                                                                     </ul>
-                                                                    <h5><Link href="/news-insight-grid/details">Revamping Brand Identity Success Story.</Link></h5>
-                                                                    <Link href="/news-insight-grid/details" className="read-more-btn">
+                                                                    <h5><Link href="/news-blog/details">Revamping Brand Identity Success Story.</Link></h5>
+                                                                    <Link href="/news-blog/details" className="read-more-btn">
                                                                         Read More
                                                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -345,13 +345,13 @@ const Header4 = () => {
                                                         </div>
                                                         <div className="col-lg-6">
                                                             <div className="menu-blog-card">
-                                                                <Link href="/news-insight-grid/details" className="blog-img">
+                                                                <Link href="/news-blog/details" className="blog-img">
                                                                     <img src="/assets/img/home1/menu-blog-img2.jpg" alt="" />
                                                                 </Link>
                                                                 <div className="blog-content">
                                                                     <ul className="blog-meta">
                                                                         <li>
-                                                                            <Link href="/news-insight-grid">
+                                                                            <Link href="/news-blog">
                                                                                 <svg width={8} height={8} viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
                                                                                     <g>
                                                                                         <path d="M0.800781 8V0L7.20078 4L0.800781 8Z" />
@@ -361,13 +361,13 @@ const Header4 = () => {
                                                                             </Link>
                                                                         </li>
                                                                         <li className="blog-date">
-                                                                            <Link href="/news-insight-grid">
+                                                                            <Link href="/news-blog">
                                                                                 15 Nov, 2024
                                                                             </Link>
                                                                         </li>
                                                                     </ul>
-                                                                    <h5><Link href="/news-insight-grid/details">Cloud Infrastructure for Rapid Growth.</Link></h5>
-                                                                    <Link href="/news-insight-grid/details" className="read-more-btn">
+                                                                    <h5><Link href="/news-blog/details">Cloud Infrastructure for Rapid Growth.</Link></h5>
+                                                                    <Link href="/news-blog/details" className="read-more-btn">
                                                                         Read More
                                                                         <svg width={10} height={10} viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
                                                                             <path d="M1 9L9 1M9 1C7.22222 1.33333 3.33333 2 1 1M9 1C8.66667 2.66667 8 6.33333 9 9" strokeWidth="1.5" strokeLinecap="round" />
@@ -392,7 +392,7 @@ const Header4 = () => {
                                                             </div>
                                                             <ul>
                                                                 <li>
-                                                                    <Link href="/news-insight-grid">
+                                                                    <Link href="/news-blog">
                                                                         <span>
                                                                             <svg width={19} height={14} viewBox="0 0 19 14" xmlns="http://www.w3.org/2000/svg">
                                                                                 <path d="M1.5 1C1.5 0.723858 1.27614 0.5 1 0.5C0.723858 0.5 0.5 0.723858 0.5 1H1.5ZM19 11L14 8.11325V13.8868L19 11ZM0.5 1V6H1.5V1H0.5ZM6 11.5H14.5V10.5H6V11.5ZM0.5 6C0.5 9.03757 2.96243 11.5 6 11.5V10.5C3.51472 10.5 1.5 8.48528 1.5 6H0.5Z" />
