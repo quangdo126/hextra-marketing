@@ -31,7 +31,7 @@ const Home4Banner = () => {
       <div className="container position-relative">
         <div className="partner-area">
           <img src="/assets/img/home4/icon/meta-logo.svg" alt="" />
-          <h5>Meta Partner - 2018</h5>
+          <h5>Meta Partner - 2020</h5>
           <span>Think Depth.Bold Impact</span>
           <svg width={200} height={6} viewBox="0 0 200 6" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM195 3.5L200 5.88675V0.113249L195 2.5V3.5ZM4.5 3.5H195.5V2.5H4.5V3.5Z" />
@@ -63,7 +63,7 @@ const Home4Banner = () => {
           <div className="col-lg-6">
             <div className="banner-content-wrap">
               <div className="subtitle">
-                <span>#1 Rated Marketing Agency</span>
+                <span>Top Rated Marketing Agency</span>
                 <i className="corner tl" />
                 <i className="corner tr" />
                 <i className="corner br" />
@@ -98,7 +98,7 @@ const Home4Banner = () => {
                     <div className="number">
                       <Counter
                         start={0}
-                        end={3}
+                        end={5}
                         speed={100}
                         forwardedRef={ref3}
                         as="h3"
@@ -120,7 +120,7 @@ const Home4Banner = () => {
                   <div className="number">
                     <Counter
                       start={0}
-                      end={13}
+                      end={12}
                       speed={80}
                       forwardedRef={ref3}
                       as="h4"
