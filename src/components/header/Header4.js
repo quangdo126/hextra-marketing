@@ -122,7 +122,7 @@ const Header4 = () => {
                                     <Link href="/">Home</Link>
                                 </li>
                                 <li className={`menu-item-has-children ${isCompanyActive ? "active" : ""}`}>
-                                    <Link href="/about" className="drop-down">Company</Link>
+                                    <Link href="/" className="drop-down">Company</Link>
                                     <i onClick={() => toggleMenu("company")} className={`bi bi-${state.activeMenu === "company" ? "dash" : "plus"} dropdown-icon`} />
                                     <ul className={`sub-menu ${state.activeMenu === "company" ? "d-block" : "none"}`} >
                                         <li className={pathname === "/about" ? "active" : ""}><Link href="/about">About Us</Link></li>
@@ -247,12 +247,12 @@ const Header4 = () => {
                                                                 </h6>
                                                             </div>
                                                             <ul>
-                                                                <li><Link href="/industry/details">Finance &amp; Fintech</Link></li>
-                                                                <li><Link href="/industry/details">Healthcare &amp; Life</Link></li>
-                                                                <li><Link href="/industry/details">Retail &amp; E-commerce</Link></li>
-                                                                <li><Link href="/industry/details">Education &amp; EdTech</Link></li>
-                                                                <li><Link href="/industry/details">Government &amp; Public Sector</Link></li>
-                                                                <li><Link href="/industry/details">Travel &amp; Hospitality</Link></li>
+                                                                <li><Link href="/industry/details">Nail Salon</Link></li>
+                                                                <li><Link href="/industry/details">Hair Salon</Link></li>
+                                                                <li><Link href="/industry/details">Beauty Salon</Link></li>
+                                                                <li><Link href="/industry/details">Restaurant</Link></li>
+                                                                <li><Link href="/industry/details">Real Estate Agent</Link></li>
+                                                                <li><Link href="/industry/details">Insurance Agent</Link></li>
                                                                 <li>
                                                                     <Link href="/industry" className="all-btn">
                                                                         View All Industries
@@ -295,7 +295,7 @@ const Header4 = () => {
                                     <Link href="/pricing">Pricing Plan</Link>
                                 </li>
                                 <li className="menu-item-has-children position-inherit">
-                                    <a href="#" className="drop-down">Resources</a>
+                                    <a href="/" className="drop-down">Resources</a>
                                     <i onClick={() => toggleMenu("resources")} className={`bi bi-${state.activeMenu === "resources" ? "dash" : "plus"} dropdown-icon`} />
                                     <div className={`mega-menu2 two ${state.activeMenu === "resources" ? "d-block" : "none"}`}>
                                         <div className="container">
