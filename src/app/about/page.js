@@ -136,7 +136,7 @@ const AboutPage = () => {
                                         <svg width={25} height={6} viewBox="0 0 25 6" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M5 2.5L0 0.113249V5.88675L5 3.5V2.5ZM20 3.5L25 5.88675V0.113249L20 2.5V3.5ZM4.5 3.5H20.5V2.5H4.5V3.5Z" />
                                         </svg>
-                                        Company
+                                        About Us
                                     </li>
                                 </ul>
                             </div>
@@ -735,8 +735,6 @@ const AboutPage = () => {
                     ]}
                 />
             </div>
-            <AwardListSection />
-            <Home3PartnerSection />
             <div className="about-page-testimonial-section">
                 <div className="container">
                     <div className="row justify-content-center mb-70 wow animate fadeInDown" data-wow-delay="200ms" data-wow-duration="1500ms">

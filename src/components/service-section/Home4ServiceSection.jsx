@@ -262,7 +262,7 @@ const Home4ServiceSection = () => {
                                 <div className="conter-content">
                                     <div className="number">
                                         <Counter
-                                            start={0}
+                                            start={4500}
                                             end={5000}
                                             speed={1}
                                             forwardedRef={ref6}
@@ -281,7 +281,7 @@ const Home4ServiceSection = () => {
                                 <div className="conter-content">
                                     <div className="number">
                                         <Counter
-                                            start={0}
+                                            start={3500}
                                             end={4000}
                                             speed={1}
                                             forwardedRef={ref3}

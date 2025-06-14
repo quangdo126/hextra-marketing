@@ -77,22 +77,22 @@ const SocialResponsibilityPage = () => {
                                     <p>Connect with a network of skilled professionals passionate about digital innovation.</p>
                                     <ul className="social-list">
                                         <li>
-                                            <a href="https://www.linkedin.com/" className="social-area">
-                                                <div className="icon">
-                                                    <i className="bx bxl-linkedin" />
-                                                </div>
-                                                <div className="content">
-                                                    <span>LinkedIn</span>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.facebook.com/" className="social-area">
+                                            <a href="https://www.facebook.com/hextramarketing" className="social-area">
                                                 <div className="icon">
                                                     <i className="bx bxl-facebook" />
                                                 </div>
                                                 <div className="content">
                                                     <span>Facebook</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/hextra-marketing" className="social-area">
+                                                <div className="icon">
+                                                    <i className="bx bxl-linkedin" />
+                                                </div>
+                                                <div className="content">
+                                                    <span>LinkedIn</span>
                                                 </div>
                                             </a>
                                         </li>

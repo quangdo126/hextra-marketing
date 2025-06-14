@@ -187,9 +187,9 @@ const Home3Footer = () => {
                           <h5>Let’s Connect</h5>
                           <ul className="social-list">
                             <li><a href="https://www.facebook.com/hextramarketing"><i className="bx bxl-facebook" /></a></li>
-                            <li><a href="https://www.linkedin.com/in/hextra-marketing"><i className="bx bxl-linkedin" /></a></li>
-                            <li><a href="https://www.youtube.com/@hextramarketing"><i className="bx bxl-youtube" /></a></li>
                             <li><a href="https://www.instagram.com/hextramarketing"><i className="bx bxl-instagram-alt" /></a></li>
+                            <li><a href="https://www.youtube.com/@hextramarketing"><i className="bx bxl-youtube" /></a></li>
+                            <li><a href="https://www.linkedin.com/in/hextra-marketing"><i className="bx bxl-linkedin" /></a></li>
                           </ul>
                         </div>
                       </div>
