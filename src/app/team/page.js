@@ -52,7 +52,7 @@ const TeamPage = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={50}
+                                            end={20}
                                             speed={15}
                                             forwardedRef={ref1}
                                             as="h2"
@@ -67,8 +67,8 @@ const TeamPage = () => {
                                 <div className="single-counter two">
                                     <div className="number">
                                         <Counter
-                                            start={0}
-                                            end={134}
+                                            start={4500}
+                                            end={5000}
                                             speed={10}
                                             forwardedRef={ref2}
                                             as="h2"
@@ -83,16 +83,16 @@ const TeamPage = () => {
                                 <div className="single-counter three">
                                     <div className="number">
                                         <Counter
-                                            start={0}
-                                            end={98}
+                                            start={3500}
+                                            end={4000}
                                             speed={10}
-                                            forwardedRef={ref3}
+                                            forwardedRef={ref4}
                                             as="h2"
                                             className="counter"
                                         />
-                                        <span>%</span>
+                                        <span>+</span>
                                     </div>
-                                    <span>Client <br />Retention Rate</span>
+                                    <span>Globally <br />Clients</span>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-sm-6">
@@ -100,13 +100,13 @@ const TeamPage = () => {
                                     <div className="number">
                                         <Counter
                                             start={0}
-                                            end={6}
-                                            speed={50}
-                                            forwardedRef={ref4}
+                                            end={95}
+                                            speed={10}
+                                            forwardedRef={ref3}
                                             as="h2"
                                             className="counter"
                                         />
-                                        <span>+</span>
+                                        <span>%</span>
                                     </div>
                                     <span>Client <br />Retention Rate</span>
                                 </div>
